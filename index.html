@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="images/favicon_1.webp" type="image/x-icon">
+    <title>Timezee</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mediaQueries.css">
+</head>
+
+<body>
+
+    <!-- start loader -->
+    <div id="loader">
+        <img src="images/preloader_1.gif" alt="Loading..." />
+    </div>
+    <!-- end loader -->
+    <!-- Start navbar -->
+    <div class="content">
+        <header class="header">
+            <div class="header-container">
+                <!-- Logo -->
+                <div class="header-logo">
+                    <a href="index.html">
+                        <img src="images/logo_1.png" alt="logo">
+                    </a>
+                </div>
+
+                <!-- Navigation Links -->
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <!-- bar icon -->
+                <div class="hamburger" id="hamburger">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+
+                <!-- Icons -->
+                <div class="header-icons">
+
+                    <div id="userMenu">
+                        <a href="login.html" id="loginLink"><i class="fa-solid fa-user"></i></a>
+                    </div>
+                    <a href="#cart" id="cart-icon"><i class="fa-solid fa-cart-shopping"><span
+                                id="cart-count">0</span></i></a>
+                </div>
+            </div>
+
+
+            <!-- Start Sidebar -->
+            <nav class="nav-sidebar" id="navSidebar">
+                <div class="close-btn" id="closeBtn">&times;</div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="sidebar-icons">
+                    <a href="#facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#twitter"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </nav>
+
+            <!-- End Sidebar -->
+            <!-- Sidebar Cart -->
+            <div id="cart-sidebar" class="cart-sidebar">
+                <div class="cart-header">
+                    <h3>Your Cart</h3>
+                    <button id="close-cart">&times;</button>
+                </div>
+                <div id="cart-items" class="cart-items"></div>
+                <div class="cart-footer">
+                    <p>Total Items: <span id="cart-total-items">0</span></p>
+                    <p>Total Price: $<span id="cart-total-price">0</span></p>
+                    <button id="go-to-cart">Go to Cart</button>
+                </div>
+            </div>
+
+            <!-- Start Overlay -->
+
+            <div class="overlay" id="overlay"></div>
+            <!-- End Overlay -->
+
+        </header>
+        <!-- End nav -->
+
+
+        <!-- start slider -->
+        <div class="slider">
+            <div class="slides-wrapper">
+                <!-- slide1 -->
+                <div class="slide active">
+                    <img src="images/slider__1.jpg" alt="slider1" />
+                    <div class="content-text">
+                        <h2>Alertzy</h2>
+                        <h3>Exclusive Offer -20% Off This Week</h3>
+                        <p>
+                            Expanding the offering is the choice between a leather strap or a metal
+                            bracelet, bringing the total new look. Black-tone stainless steel case
+                            with a black rubber strap. Scratch free sapphire crystal.
+                        </p>
+                        <div class="price">Starting @ <span>$250.00</span></div>
+                        <button class="btn"><span>EXPLORE SERVICES</span></button>
+                    </div>
+                </div>
+
+                <!-- slide2 -->
+                <div class="slide">
+                    <img src="images/slider__2.jpg" alt="slider2" />
+                    <div class="content-text">
+                        <h2>Gorgeous</h2>
+                        <h3>Exclusive of Sales Tax</h3>
+                        <p>
+                            The watch bracelet gives a much far colder personality. Dress watch
+                            style. Swiss made luxury watch. Stainless steel case with a brown
+                            leather strap. Scratch resistant sapphire crystal.
+                        </p>
+                        <div class="price">Starting @ <span>$100.00</span></div>
+                        <button class="btn"><span>EXPLORE</span></button>
+                    </div>
+                </div>
+
+                <!-- slide3 -->
+                <div class="slide">
+                    <img src="images/slider__3_2000x_1.jpg" alt="slider3" />
+                    <div class="content-text" style="left:50%">
+                        <h2>Gertious</h2>
+                        <h3>Exclusive of Sales Tax</h3>
+                        <p>
+                            The watch bracelet gives a much far colder personality. Dress watch
+                            style. Swiss made luxury watch. Stainless steel case with a brown
+                            leather strap. Scratch resistant sapphire crystal.
+                        </p>
+                        <div class="price">Starting @ <span>$350.00</span></div>
+                        <button class="btn"><span>EXPLORE SERVICES</span></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- controls -->
+            <div class="controls">
+                <button id="prev"><span>&#10094;</span></button>
+                <button id="next"><span>&#10095;</span></button>
+            </div>
+
+            <!-- dots -->
+            <div class="dots"></div>
+        </div>
+
+        <!-- end slider -->
+
+        <!-- start banner -->
+        <section class="grid-banner">
+            <div class="banner-block">
+                <div class="banner-image">
+                    <img src="images/Untitled-1.jpg" alt="Banner 1">
+                    <div class="overlay">
+                        <div class="banner-text">
+                            <h5>Flash Sale</h5>
+                            <h4>Men's Watch</h4>
+                            <p>25% Discount</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="divider"></div> -->
+
+            <div class="banner-block">
+                <div class="banner-image">
+                    <img src="images/promo2_c5444c07-50e6-4452-90ed-99ca49a106fc.png" alt="Banner 2">
+                    <div class="overlay">
+                        <div class="banner-text">
+                            <h5>Flash Sale</h5>
+                            <h4>Women's Watch</h4>
+                            <p>40% Discount</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="divider"></div> -->
+
+            <div class="banner-block">
+                <div class="banner-image">
+                    <img src="images/promo3_e10c824c-b077-4e67-be09-c11067066cf5.png" alt="Banner 3">
+                    <div class="overlay">
+                        <div class="banner-text">
+                            <h5>Flash Sale</h5>
+                            <h4>Couple's Watch</h4>
+                            <p>30% Discount</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- end banner -->
+
+        <!-- start product category -->
+        <div class="product-category">
+            <h3>Product Categories</h3>
+            <div class="product-category-nav">
+                <ul>
+                    <li><a href="#" class="active" data-category="classico">CLASSICO</a></li>
+                    <li><a href="#" data-category="executive">EXECUTIVE</a></li>
+                    <li><a href="#" data-category="sports">SPORTS</a></li>
+                    <li><a href="#" data-category="dialer">DIALER</a></li>
+                </ul>
+            </div>
+            <div class="product-category-boxes">
+                <div class="product-box">
+                    <img src="images/watch1.png" alt="Product 1">
+                    <div class="product-info">
+                        <h4><a href="#">Classic Roman</a></h4>
+                    </div>
+                </div>
+                <div class="product-box">
+                    <img src="images/watch2_02f3b74c-51b8-49b6-b632-67a2abc70b38.png" alt="Product 2">
+                    <div class="product-info">
+                        <h4><a href="#">Golden Classical</a></h4>
+                    </div>
+                </div>
+                <div class="product-box">
+                    <img src="images/Watch3.png" alt="Product 3">
+                    <div class="product-info">
+                        <h4><a href="#">Golden Analog Watch</a></h4>
+                    </div>
+                </div>
+                <div class="product-box">
+                    <img src="images/Watch4 (1).png" alt="Product 4">
+                    <div class="product-info">
+                        <h4><a href="#">Golden Automatic</a></h4>
+                    </div>
+                </div>
+                <div class="product-box">
+                    <img src="images/Watch5_0f753270-74d5-471c-b694-5f55d31a0f0e.png" alt="Product 5">
+                    <div class="product-info">
+                        <h4><a href="#">Platinum Numeral</a></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end product category -->
+        <!-- Start counter -->
+        <div class="counter">
+            <h3>Most wanted of the year</h3>
+            <div class="counter-boxes">
+                <div class="counter-box">
+                    <p id="days">100</p>
+                    <span>Days</span>
+                </div>
+                <div class="counter-box">
+                    <p id="hours">00</p>
+                    <span>Hrs</span>
+                </div>
+                <div class="counter-box">
+                    <p id="minutes">00</p>
+                    <span>Mins</span>
+                </div>
+                <div class="counter-box">
+                    <p id="seconds">00</p>
+                    <span>Secs</span>
+                </div>
+            </div>
+            <button class="shop-btn"><span>Shop now</span></button>
+        </div>
+
+        <!-- end counter -->
+
+        <!-- start clock-text -->
+        <div class="clock-text">
+            <h3>Roman or Numeral</h3>
+            <p style="margin-bottom:20px ;">Limited Edition of 200 pieces world-wide. Watch Big Bang,
+                361.PE.2010.RW.1104 The stainless steel case
+                and band are thick and prominent, creating a durable feel on the wrist. However, the dial is much more
+                whimsical.</p>
+            <p>Accurate and Comfortable Imported Japanese quartz movement ensures precise time keeping. Its classic
+                design of multi display watches and comfortable silicone material can provide to users excellent outdoor
+                experiences.</p>
+            <button class="shop-btn"><span>Shop now</span></button>
+
+        </div>
+
+        <!-- end clock-text -->
+        <!-- start collection section -->
+        <div class="collection">
+            <div class="collection-cards">
+
+                <!-- Card 1 -->
+                <div class="collection-card">
+                    <img src="images/banner_286c6b34-88cb-465a-a2e8-2a5faf8295df.jpg" alt="Collection 1">
+                    <div class="collection-text">
+                        <h4>Versits</h4>
+                        <p>Rhuyese ser sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus
+                            nunc.uis leo. Sed fringilla mauris sit amet nibh.</p>
+                        <button class="shop-btn"><span>View All Collections</span></button>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="collection-card">
+                    <img src="images/Gallery2.jpg" alt="Collection 2">
+                    <div class="collection-text">
+                        <h4>2019 Novalties</h4>
+                        <p>Hiue wghres rhuyres magna. Sed consequat, leo eget bibendum sodales, augue velit cursus
+                            nunc.uis leo. Sed fringilla mauris sit amet nibh.</p>
+                        <button class="shop-btn"><span>View All Collections</span></button>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="collection-card">
+                    <img src="images/Gallery3.jpg" alt="Collection 3">
+                    <div class="collection-text">
+                        <h4>Javelin</h4>
+                        <p>Kiures guyrese ngittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus
+                            nunc.uis leo. Sed fringilla mauris sit amet nibh.</p>
+                        <button class="shop-btn"><span>View All Collections</span></button>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="collection-card">
+                    <img src="images/Gallery4.jpg" alt="Collection 4">
+                    <div class="collection-text">
+                        <h4>Voltamic</h4>
+                        <p>Biurese guyrese orese jittis magna. Sed consequat, leo eget bibendum sodales, augue velit
+                            cursus nunc.uis leo. Sed fringilla mauris sit amet nibh.</p>
+                        <button class="shop-btn"><span>View All Collections</span></button>
+                    </div>
+                </div>
+                <!-- Card 5 -->
+                <div class="collection-card">
+                    <img src="images/Gallery5.jpg" alt="Collection 5">
+                    <div class="collection-text">
+                        <h4>Cerutaio</h4>
+                        <p>Ulreser tellus marquestis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus
+                            nunc.uis leo. Sed fringilla mauris sit amet nibh.</p>
+                        <button class="shop-btn"><span>View All Collections</span></button>
+                    </div>
+                </div>
+                <!-- Card 6 -->
+                <div class="collection-card">
+                    <img src="images/Gallery6.jpg" alt="Collection 6">
+                    <div class="collection-text">
+                        <h4>Zerairo</h4>
+                        <p>Biurese hierese ciseittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus
+                            nunc.uis leo. Sed fringilla mauris sit amet nibh.</p>
+                        <button class="shop-btn"><span>View All Collections</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end collection section -->
+        <!-- start quote slider -->
+        <div class="quote-slider">
+            <div class="quote-slides-wrapper">
+                <!-- slide1 -->
+                <div class="quote-slide active">
+                    <p>"I have been wearing this watch for a few months now and I absolutely love it! The design is
+                        sleek
+                        and modern, and the quality is top-notch. I've received so many compliments on it already."</p>
+                    <h4>- John D.</h4>
+                </div>
+
+                <!-- slide2 -->
+                <div class="quote-slide">
+                    <p>"This watch is a game-changer! The features are incredible, and it's so easy to use. I especially
+                        love the fitness tracking capabilities - it's helped me stay motivated and on track with my
+                        health goals."</p>
+                    <h4>- Sarah K.</h4>
+                </div>
+
+                <!-- slide3 -->
+                <div class="quote-slide">
+                    <p>"I was hesitant to invest in a high-end watch, but I'm so glad I did. This watch is worth every
+                        penny - the craftsmanship is impeccable, and it feels great on my wrist. I've even started
+                        wearing it to formal events!"</p>
+                    <h4>- Michael T.</h4>
+                </div>
+            </div>
+
+            <!-- controls -->
+            <div class="quote-controls">
+                <button id="quote-prev"><span>&#10094;</span></button>
+                <button id="quote-next"><span>&#10095;</span></button>
+            </div>
+        </div>
+        <!-- end quote slider -->
+
+        <!-- Start help services -->
+        <div class="help-services">
+            <div class="help-container">
+                <div class="help-column">
+                    <h4>Help</h4>
+                    <ul>
+                        <li><a href="#">Search</a></li>
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">Information</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Shipping Details</a></li>
+                    </ul>
+                </div>
+                <div class="help-column">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Refunds & Returns</a></li>
+                        <li><a href="#">Deliveries</a></li>
+                    </ul>
+                </div>
+                <div class="help-column">
+                    <h4>Information</h4>
+                    <ul>
+                        <li><a href="#">Search Terms</a></li>
+                        <li><a href="#">Advanced Search</a></li>
+                        <li><a href="#">Help & Faq's</a></li>
+                        <li><a href="#">Store Location</a></li>
+                        <li><a href="#">Orders & Returns</a></li>
+                    </ul>
+                </div>
+                <div class="help-column">
+                    <h4>Address</h4>
+                    <p><i class="fa-solid fa-house"></i> No: 58 A, East Madison Street</p>
+                    <p> Baltimore, MD, USA 4508</p>
+                    <ul>
+                        <li><a href="#"><i class="fa-solid fa-phone"></i> Phone: 0000 - 123 - 456789</a></li>
+                        <li><a href="#">
+                                <fi class="fa-solid fa-envelope"></fi>Email: info@example.com
+                            </a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+        <!-- End help services -->
+        <!-- Footer -->
+        <footer>
+            <p>All Right Reserved © 2025, Design Themes</p>
+        </footer>
+
+        <!-- Back to Top Button -->
+        <button id="backToTop" title="Go to top">
+            <span><i class="fa-regular fa-clock"></i></span>
+        </button>
+    </div>
+    <script type="module" src="main.js"></script>
+</body>
+
+</html>

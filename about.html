@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="images/favicon_1.webp" type="image/x-icon">
+    <title>Timezee</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mediaQueries.css">
+</head>
+
+<body>
+    <!-- start loader -->
+    <div id="loader">
+        <img src="images/preloader_1.gif" alt="Loading..." />
+    </div>
+    <!-- end loader -->
+    <!-- Start navbar -->
+    <div class="content">
+        <header class="header">
+            <div class="header-container">
+                <!-- Logo -->
+                <div class="header-logo">
+                    <a href="index.html">
+                        <img src="images/logo_1.png" alt="logo">
+                    </a>
+                </div>
+
+                <!-- Navigation Links -->
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <!-- bar icon -->
+                <div class="hamburger" id="hamburger">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+
+                <!-- Icons -->
+                <div class="header-icons">
+                    <div id="userMenu">
+                        <a href="login.html" id="loginLink"><i class="fa-solid fa-user"></i></a>
+                    </div>
+                    <a href="#cart" id="cart-icon"><i class="fa-solid fa-cart-shopping"></i>
+                        <span id="cart-count">0</span></a>
+                </div>
+            </div>
+
+
+            <!-- Start Sidebar -->
+            <nav class="nav-sidebar" id="navSidebar">
+                <div class="close-btn" id="closeBtn">&times;</div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="sidebar-icons">
+                    <a href="#facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#twitter"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </nav>
+
+            <!-- End Sidebar -->
+            <!-- Sidebar Cart -->
+            <div id="cart-sidebar" class="cart-sidebar">
+                <div class="cart-header">
+                    <h3>Your Cart</h3>
+                    <button id="close-cart">&times;</button>
+                </div>
+                <div id="cart-items" class="cart-items"></div>
+                <div class="cart-footer">
+                    <p>Total Items: <span id="cart-total-items">0</span></p>
+                    <p>Total Price: $<span id="cart-total-price">0</span></p>
+                    <button id="go-to-cart">Go to Cart</button>
+                </div>
+            </div>
+            <!-- Start Overlay -->
+
+            <div class="overlay" id="overlay"></div>
+            <!-- End Overlay -->
+
+        </header>
+        <!-- End nav -->
+        <!-- start hero section -->
+        <div class="hero">
+            <div class="text">
+                <h1>About us
+                </h1>
+                <span>
+                    <a href="index.html">Home</a> / About us
+
+
+                </span>
+            </div>
+        </div>
+
+        <!-- end hero section -->
+        <!-- start about -->
+        <section class="team-section">
+            <div class="container">
+                <h2>Our Team</h2>
+                <p class="team-intro">
+                    When we take care of our employees, knowing very well, they will feel the same
+                    towards the customers and would do everything in their power to take care of them!
+                </p>
+
+                <div class="team-members">
+                    <!-- Member 1 -->
+                    <div class="team-member">
+                        <img src="images/team1.jpg" alt="Mable Barton">
+                        <h4>Mable Barton</h4>
+                        <p>Fashion Designer</p>
+                        <div class="overlay-links">
+
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-pinterest"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Member 2 -->
+                    <div class="team-member">
+                        <img src="images/team2.jpg" alt="Mandy Payne">
+                        <h4>Mandy Payne</h4>
+                        <p>Human Resources</p>
+                        <div class="overlay-links">
+
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-pinterest"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Member 3 -->
+                    <div class="team-member">
+                        <img src="images/team3.jpg" alt="Janice Kim">
+                        <h4>Janice Kim</h4>
+                        <p>Front Office Manager</p>
+                        <div class="overlay-links">
+
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-pinterest"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Member 4 -->
+                    <div class="team-member">
+                        <img src="images/team-4.jpg" alt="Willie Fuller">
+                        <h4>Willie Fuller</h4>
+                        <p>Design Analyst</p>
+                        <div class="overlay-links">
+
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-pinterest"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- end about -->
+
+        <!-- Start help services -->
+        <div class="help-services">
+            <div class="help-container">
+                <div class="help-column">
+                    <h4>Help</h4>
+                    <ul>
+                        <li><a href="#">Search</a></li>
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">Information</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Shipping Details</a></li>
+                    </ul>
+                </div>
+                <div class="help-column">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Refunds & Returns</a></li>
+                        <li><a href="#">Deliveries</a></li>
+                    </ul>
+                </div>
+                <div class="help-column">
+                    <h4>Information</h4>
+                    <ul>
+                        <li><a href="#">Search Terms</a></li>
+                        <li><a href="#">Advanced Search</a></li>
+                        <li><a href="#">Help & Faq's</a></li>
+                        <li><a href="#">Store Location</a></li>
+                        <li><a href="#">Orders & Returns</a></li>
+                    </ul>
+                </div>
+                <div class="help-column">
+                    <h4>Address</h4>
+                    <p><i class="fa-solid fa-house"></i> No: 58 A, East Madison Street</p>
+                    <p> Baltimore, MD, USA 4508</p>
+                    <ul>
+                        <li><a href="#"><i class="fa-solid fa-phone"></i> Phone: 0000 - 123 - 456789</a></li>
+                        <li><a href="#">
+                                <fi class="fa-solid fa-envelope"></fi>Email: info@example.com
+                            </a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+        <!-- End help services -->
+        <!-- Footer -->
+        <footer>
+            <p>All Right Reserved © 2025, Design Themes</p>
+        </footer>
+
+        <!-- Back to Top Button -->
+        <button id="backToTop" title="Go to top">
+            <span><i class="fa-regular fa-clock"></i></span>
+        </button>
+    </div>
+    <script type="module" src="main.js"></script>
+</body>
+
+</html>

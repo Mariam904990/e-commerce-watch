@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="images/favicon_1.webp" type="image/x-icon">
+    <title>Timezee</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mediaQueries.css">
+</head>
+
+<body>
+    <!-- start loader -->
+    <div id="loader">
+        <img src="images/preloader_1.gif" alt="Loading..." />
+    </div>
+    <!-- end loader -->
+    <!-- Start navbar -->
+    <div class="content">
+        <header class="header">
+            <div class="header-container">
+                <!-- Logo -->
+                <div class="header-logo">
+                    <a href="index.html">
+                        <img src="images/logo_1.png" alt="logo">
+                    </a>
+                </div>
+
+                <!-- Navigation Links -->
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#shop">Shop</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact-us">Contact</a></li>
+                </ul>
+                <!-- bar icon -->
+                <div class="hamburger" id="hamburger">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+
+                <!-- Icons -->
+                <div class="header-icons">
+                    <a href="#search"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    <a href="login.html"><i class="fa-solid fa-user"></i></a>
+                    <a href="#cart"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+            </div>
+
+
+            <!-- Start Sidebar -->
+            <nav class="nav-sidebar" id="navSidebar">
+                <div class="close-btn" id="closeBtn">&times;</div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#shop">Shop</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact-us">Contact</a></li>
+                </ul>
+                <div class="sidebar-icons">
+                    <a href="#facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#twitter"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </nav>
+
+            <!-- End Sidebar -->
+            <!-- Start Overlay -->
+
+            <div class="overlay" id="overlay"></div>
+            <!-- End Overlay -->
+
+
+        </header>
+        <!-- End nav -->
+        <!-- start hero section -->
+        <div class="hero">
+            <div class="text">
+                <h1>Account</h1>
+                <span>
+                    <a href="index.html">Home</a> / Account
+                </span>
+            </div>
+        </div>
+
+        <!-- end hero section -->
+
+        <!-- start login form -->
+        <div class="form-container">
+            <h2>Login</h2>
+            <form id="loginForm" novalidate>
+                <input type="email" id="loginEmail" placeholder="Email" required>
+                <div class="error-message" id="loginEmailError"></div>
+
+                <input type="password" id="loginPassword" placeholder="Password" required>
+                <div class="error-message" id="loginPasswordError"></div>
+
+                <button type="submit"><span>SIGN IN</span></button>
+
+                <div class="links-row">
+                    <a href="register.html">Create Account</a>
+                    <a href="#" id="forgotLink">Forgot Password?</a>
+                </div>
+            </form>
+        </div>
+
+        <!-- Popup -->
+        <div class="popup" id="loginPopup">
+            <h3>Login Successful!</h3>
+            <p>Redirecting to Home Page...</p>
+        </div>
+
+        <!-- end login form -->
+
+        <!-- start Forget Password Popup -->
+
+        <div class="popup-overlay" id="popupOverlay"></div>
+        <div class="popup-box" id="forgotPopup">
+            <h3>Reset Password</h3>
+            <form id="forgotForm" novalidate>
+                <input type="email" id="forgotEmail" placeholder="Enter your email" required>
+                <div class="error-message" id="forgotEmailError"></div>
+                <span id="forgotResultMsg" class="result-message"></span>
+
+                <button type="submit" class="restbtn"><span>Send Reset Link</span></button>
+                <button type="button" id="closeForgot" class="close-btn"><i class="fa-solid fa-xmark"></i></button>
+            </form>
+        </div>
+        <!-- end Forget Password Popup -->
+
+
+        <!-- Start help services -->
+        <div class="help-services">
+            <div class="help-container">
+                <div class="help-column">
+                    <h4>Help</h4>
+                    <ul>
+                        <li><a href="#">Search</a></li>
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">Information</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Shipping Details</a></li>
+                    </ul>
+                </div>
+                <div class="help-column">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Refunds & Returns</a></li>
+                        <li><a href="#">Deliveries</a></li>
+                    </ul>
+                </div>
+                <div class="help-column">
+                    <h4>Information</h4>
+                    <ul>
+                        <li><a href="#">Search Terms</a></li>
+                        <li><a href="#">Advanced Search</a></li>
+                        <li><a href="#">Help & Faq's</a></li>
+                        <li><a href="#">Store Location</a></li>
+                        <li><a href="#">Orders & Returns</a></li>
+                    </ul>
+                </div>
+                <div class="help-column">
+                    <h4>Address</h4>
+                    <p><i class="fa-solid fa-house"></i> No: 58 A, East Madison Street</p>
+                    <p> Baltimore, MD, USA 4508</p>
+                    <ul>
+                        <li><a href="#"><i class="fa-solid fa-phone"></i> Phone: 0000 - 123 - 456789</a></li>
+                        <li><a href="#">
+                                <fi class="fa-solid fa-envelope"></fi>Email: info@example.com
+                            </a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+        <!-- End help services -->
+        <!-- Footer -->
+        <footer>
+            <p>All Right Reserved © 2025, Design Themes</p>
+        </footer>
+
+        <!-- Back to Top Button -->
+        <button id="backToTop" title="Go to top">
+            <span><i class="fa-regular fa-clock"></i></span>
+        </button>
+    </div>
+    <script type="module" src="main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="images/favicon_1.webp" type="image/x-icon">
+    <title>Timezee</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mediaQueries.css">
+</head>
+
+<body>
+    <!-- start loader -->
+    <div id="loader">
+        <img src="images/preloader_1.gif" alt="Loading..." />
+    </div>
+    <!-- end loader -->
+    <!-- Start navbar -->
+    <div class="content">
+        <header class="header">
+            <div class="header-container">
+                <!-- Logo -->
+                <div class="header-logo">
+                    <a href="index.html">
+                        <img src="images/logo_1.png" alt="logo">
+                    </a>
+                </div>
+
+                <!-- Navigation Links -->
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <!-- bar icon -->
+                <div class="hamburger" id="hamburger">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+
+                <!-- Icons -->
+                <div class="header-icons">
+                    <div id="userMenu">
+                        <a href="login.html" id="loginLink"><i class="fa-solid fa-user"></i></a>
+                    </div>
+                    <a href="#cart" id="cart-icon"><i class="fa-solid fa-cart-shopping"></i>
+                        <span id="cart-count">0</span></a>
+                </div>
+            </div>
+
+
+            <!-- Start Sidebar -->
+            <nav class="nav-sidebar" id="navSidebar">
+                <div class="close-btn" id="closeBtn">&times;</div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="sidebar-icons">
+                    <a href="#facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#twitter"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </nav>
+
+            <!-- End Sidebar -->
+            <!-- Sidebar Cart -->
+            <div id="cart-sidebar" class="cart-sidebar">
+                <div class="cart-header">
+                    <h3>Your Cart</h3>
+                    <button id="close-cart">&times;</button>
+                </div>
+                <div id="cart-items" class="cart-items"></div>
+                <div class="cart-footer">
+                    <p>Total Items: <span id="cart-total-items">0</span></p>
+                    <p>Total Price: $<span id="cart-total-price">0</span></p>
+                    <button id="go-to-cart"><span>Go to Cart</span></button>
+                </div>
+            </div>
+            <!-- Start Overlay -->
+
+            <div class="overlay" id="overlay"></div>
+            <!-- End Overlay -->
+
+        </header>
+        <!-- End nav -->
+        <!-- start hero section -->
+        <div class="hero">
+            <div class="text">
+                <h1>Product
+                </h1>
+                <span>
+                    <a href="index.html">Home</a> / Products
+                </span>
+            </div>
+        </div>
+
+        <!-- end hero section -->
+        <!-- start product details section -->
+        <main class="product-details">
+            <div class="container">
+                <div id="product-details"></div>
+            </div>
+        </main>
+        <!-- end product details -->
+        <!-- start description -->
+        <!-- Product Tabbed Content -->
+        <section class="product-tabs" aria-label="Product details tabs">
+            <div class="tabs" role="tablist" aria-label="Product sections">
+                <button role="tab" aria-selected="true" aria-controls="tab-desc" id="tab-desc-btn"
+                    class="tab-btn active">Description</button>
+                <button role="tab" aria-selected="false" aria-controls="tab-ship" id="tab-ship-btn"
+                    class="tab-btn">Shipping &amp; Returns</button>
+                <button role="tab" aria-selected="false" aria-controls="tab-rev" id="tab-rev-btn"
+                    class="tab-btn">Reviews</button>
+            </div>
+
+            <div class="tab-panels">
+                <div id="tab-desc" role="tabpanel" aria-labelledby="tab-desc-btn" class="tab-panel">
+                    <p>
+                        Nam tempus turpis at metus scelerisque placerat. Pellentesque diam dolor, elementum et lobortis
+                        des mollis ut risus.
+                        Sedcus faucibus an ullamcorper mattis tristique des commodo pharetras. Donec pretium egestas
+                        sapien et mollis.
+                    </p>
+
+                    <h4>Sample Unordered List</h4>
+                    <ul>
+                        <li>Commodus in tempor ullamcorper miaculis</li>
+                        <li>Pellentesque vitae neque mollis urna mattis laoreet</li>
+                        <li>Divamus sit amet purus justo</li>
+                        <li>Proin molestie egestas orci ac suscipit risus posuere loremous</li>
+                    </ul>
+
+                    <h4>Sample Ordered List</h4>
+                    <ol>
+                        <li>Commodus in tempor ullamcorper miaculis</li>
+                        <li>Pellentesque vitae neque mollis urna mattis laoreet</li>
+                        <li>Divamus sit amet purus justo</li>
+                        <li>Proin molestie egestas orci ac suscipit risus posuere loremous</li>
+                    </ol>
+
+                    <h4>Sample Paragraph</h4>
+                    <p>
+                        Praesent vestibulum congue tellus at fringilla. Curabitur vitae semper sem, eu convallis est.
+                        Cras felis nunc commodo eu convallis vitae interdum non nisl. Maecenas ac est sit amet augue
+                        pharetra convallis nec danos dui. Cras suscipit quam et turpis eleifend vitae malesuada magna
+                        congue. Damus id ullamcorper neque. Sed vitae mi a mi pretium aliquet ac sed elit. Pellentesque
+                        nulla eros accumsan quis justo at tincidunt lobortis denimes loremous. Suspendisse vestibulum
+                        lectus in lectus volutpat, ut dapibus purus pulvinar.
+                        Vestibulum sit amet auctor ipsum.
+                    </p>
+                </div>
+
+                <div id="tab-ship" role="tabpanel" aria-labelledby="tab-ship-btn" class="tab-panel" hidden>
+                    <h3>Shipping &amp; Returns</h3>
+                    <p>
+                        We ship worldwide. Processing time is usually 1–3 business days. Delivery time depends on the
+                        destination and shipping
+                        method—typically 3–10 business days for standard international shipping.
+                    </p>
+                    <p>
+                        Returns accepted within 30 days of delivery. Item must be unused and in original packaging.
+                        Refunds are processed within
+                        7 business days after we receive the returned item.
+                    </p>
+                    <ul>
+                        <li>Standard shipping: 3–10 business days</li>
+                        <li>Express shipping: 1–3 business days (where available)</li>
+                        <li>Return window: 30 days from delivery</li>
+                    </ul>
+                </div>
+
+                <div id="tab-rev" role="tabpanel" aria-labelledby="tab-rev-btn" class="tab-panel" hidden>
+                    <h3>Reviews</h3>
+
+                    <!-- Existing reviews (sample) -->
+                    <div class="reviews-list">
+                        <article class="review">
+                            <strong>John D.</strong> <span class="rating">★★★★☆</span>
+                            <p>I have been wearing this watch for a few months — sleek design and great build quality.
+                            </p>
+                        </article>
+
+                        <article class="review">
+                            <strong>Sarah K.</strong> <span class="rating">★★★★★</span>
+                            <p>Fantastic watch. The fitness features helped me stay on track with my goals.</p>
+                        </article>
+                    </div>
+
+                    <!-- Leave a review form -->
+                    <form id="reviewForm" class="review-form" aria-label="Leave a review">
+                        <h4>Leave a review</h4>
+
+                        <label for="reviewerName">Name</label>
+                        <input id="reviewerName" name="reviewerName" type="text" required />
+
+                        <label for="reviewRating">Rating</label>
+                        <select id="reviewRating" name="reviewRating" required>
+                            <option value="">Select rating</option>
+                            <option value="5">5 — Excellent</option>
+                            <option value="4">4 — Very good</option>
+                            <option value="3">3 — Good</option>
+                            <option value="2">2 — Fair</option>
+                            <option value="1">1 — Poor</option>
+                        </select>
+
+                        <label for="reviewText">Review</label>
+                        <textarea id="reviewText" name="reviewText" rows="4" required></textarea>
+
+                        <button type="submit" class="btn-submit"><span>Submit review</span></button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!-- End Product Tabbed Content -->
+        <!-- end description -->
+
+        <!-- Start help services -->
+        <div class="help-services">
+            <div class="help-container">
+                <div class="help-column">
+                    <h4>Help</h4>
+                    <ul>
+                        <li><a href="#">Search</a></li>
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">Information</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Shipping Details</a></li>
+                    </ul>
+                </div>
+                <div class="help-column">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Refunds & Returns</a></li>
+                        <li><a href="#">Deliveries</a></li>
+                    </ul>
+                </div>
+                <div class="help-column">
+                    <h4>Information</h4>
+                    <ul>
+                        <li><a href="#">Search Terms</a></li>
+                        <li><a href="#">Advanced Search</a></li>
+                        <li><a href="#">Help & Faq's</a></li>
+                        <li><a href="#">Store Location</a></li>
+                        <li><a href="#">Orders & Returns</a></li>
+                    </ul>
+                </div>
+                <div class="help-column">
+                    <h4>Address</h4>
+                    <p><i class="fa-solid fa-house"></i> No: 58 A, East Madison Street</p>
+                    <p> Baltimore, MD, USA 4508</p>
+                    <ul>
+                        <li><a href="#"><i class="fa-solid fa-phone"></i> Phone: 0000 - 123 - 456789</a></li>
+                        <li><a href="#">
+                                <fi class="fa-solid fa-envelope"></fi>Email: info@example.com
+                            </a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+        <!-- End help services -->
+        <!-- Footer -->
+        <footer>
+            <p>All Right Reserved © 2025, Design Themes</p>
+        </footer>
+
+        <!-- Back to Top Button -->
+        <button id="backToTop" title="Go to top">
+            <span><i class="fa-regular fa-clock"></i></span>
+        </button>
+    </div>
+    <script type="module" src="main.js"></script>
+    <script type="module" src="/js/product-details.js"></script>
+</body>
+
+</html>

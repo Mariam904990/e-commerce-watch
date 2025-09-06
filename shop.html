@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="images/favicon_1.webp" type="image/x-icon">
+    <title>Timezee</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mediaQueries.css">
+</head>
+
+<body>
+    <!-- start loader -->
+    <div id="loader">
+        <img src="images/preloader_1.gif" alt="Loading..." />
+    </div>
+    <!-- end loader -->
+    <!-- Start navbar -->
+    <div class="content">
+        <header class="header">
+            <div class="header-container">
+                <!-- Logo -->
+                <div class="header-logo">
+                    <a href="index.html">
+                        <img src="images/logo_1.png" alt="logo">
+                    </a>
+                </div>
+
+                <!-- Navigation Links -->
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <!-- bar icon -->
+                <div class="hamburger" id="hamburger">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+
+                <!-- Icons -->
+                <div class="header-icons">
+                    <div id="userMenu">
+                        <a href="login.html" id="loginLink"><i class="fa-solid fa-user"></i></a>
+                    </div>
+                    <a href="#cart" id="cart-icon"><i class="fa-solid fa-cart-shopping"></i>
+                        <span id="cart-count">0</span></a>
+                </div>
+            </div>
+
+
+            <!-- Start Sidebar -->
+            <nav class="nav-sidebar" id="navSidebar">
+                <div class="close-btn" id="closeBtn">&times;</div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="sidebar-icons">
+                    <a href="#facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#twitter"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </nav>
+
+            <!-- End Sidebar -->
+            <!-- Sidebar Cart -->
+            <div id="cart-sidebar" class="cart-sidebar">
+                <div class="cart-header">
+                    <h3>Your Cart</h3>
+                    <button id="close-cart">&times;</button>
+                </div>
+                <div id="cart-items" class="cart-items"></div>
+                <div class="cart-footer">
+                    <p>Total Items: <span id="cart-total-items">0</span></p>
+                    <p>Total Price: $<span id="cart-total-price">0</span></p>
+                    <button id="go-to-cart"><span>Go to Cart</span></button>
+                </div>
+            </div>
+            <!-- Start Overlay -->
+
+            <div class="overlay" id="overlay"></div>
+            <!-- End Overlay -->
+
+        </header>
+        <!-- End nav -->
+        <!-- start hero section -->
+        <div class="hero">
+            <div class="text">
+                <h1>Collection</h1>
+                <span>
+                    <a href="index.html">Home</a> / Products
+                </span>
+            </div>
+        </div>
+
+        <!-- end hero section -->
+        <div class="products">
+            <h2>Products</h2>
+            <main class="container">
+
+                <!-- Filters -->
+                <aside class="filters">
+                    <h3>Filters</h3>
+                    <div class="filter-group">
+                        <h4>Availability</h4>
+                        <label><input type="radio" name="availability" value="in"> In stock</label><br>
+                        <label><input type="radio" name="availability" value="out"> Out of stock</label>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>Product Type</h4>
+                        <label><input type="checkbox" name="type" value="digital"> Digital Watch</label><br>
+                        <label><input type="checkbox" name="type" value="analog"> Analog Watch</label>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>Color</h4>
+                        <label><input type="checkbox" name="color" value="black"> Black</label><br>
+                        <label><input type="checkbox" name="color" value="gold"> Gold</label><br>
+                        <label><input type="checkbox" name="color" value="silver"> Silver</label>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>Price Range</h4>
+                        <input type="range" id="priceRange" min="50" max="800" value="200">
+                        <span id="priceValue">200</span>
+
+                    </div>
+                </aside>
+
+                <!-- Products Grid -->
+                <section class="products-grid">
+                    <!-- Product 1 -->
+                    <div class="product-card" data-id="1" data-price="200" data-stock="true" data-type="digital"
+                        data-color="black" data-company="Baggit">
+                        <div class="product-img">
+                            <img src="images/watch1.png" alt="Black Numeral Dial">
+                            <button class="product-detail"><span><i class="fa-solid fa-eye"></i></span></button>
+                        </div>
+                        <div class="product-info">
+                            <h4>Black Numeral Dial</h4>
+                            <div class="price">$200.00</div>
+                            <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>☆</div>
+                            <div class="company">Baggit</div>
+                            <div class="quantity">
+                                <label>Qty: </label>
+                                <input type="number" value="1" min="1">
+                            </div>
+                            <button class="add-cart-btn"><span>Add to Cart</span></button>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="product-card" data-id="2" data-price="300" data-stock="true" data-type="analog"
+                        data-color="gold" data-company="Fostelo">
+                        <div class="product-img">
+                            <img src="/images/watch2_02f3b74c-51b8-49b6-b632-67a2abc70b38.png" alt="Golden Classical">
+                            <button class="product-detail"><span><i class="fa-solid fa-eye"></i></span></button>
+                        </div>
+                        <div class="product-info">
+                            <h4>Golden Classical</h4>
+                            <div class="price">$300.00</div>
+                            <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i></div>
+                            <div class="company">Fostelo</div>
+                            <div class="quantity">
+                                <label>Qty: </label>
+                                <input type="number" value="1" min="1">
+                            </div>
+                            <button class="add-cart-btn"><span>Add to Cart</span></button>
+                        </div>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="product-card" data-id="3" data-price="250" data-stock="false" data-type="analog"
+                        data-color="silver" data-company="Timezee">
+                        <div class="product-img">
+                            <img src="images/Watch3.png" alt="Analog Roman">
+                            <button class="product-detail">
+                                <span><i class="fa-solid fa-eye"></i></span>
+                            </button>
+                        </div>
+                        <div class="product-info">
+                            <h4>Analog Roman</h4>
+                            <div class="price">$250.00</div>
+                            <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i>☆☆</div>
+                            <div class="company">Timzee</div>
+                            <div class="quantity">
+                                <label>Qty: </label>
+                                <input type="number" value="1" min="1">
+                            </div>
+                            <button class="add-cart-btn"><span>Add to Cart</span></button>
+                        </div>
+                    </div>
+
+                    <!-- Product 4 -->
+                    <div class="product-card" data-id="4" data-price="400" data-stock="true" data-type="digital"
+                        data-color="gold" data-company="Biltwell">
+                        <div class="product-img">
+                            <img src="images/Watch4.png" alt="Classic Roman">
+                            <button class="product-detail">
+                                <span><i class="fa-solid fa-eye"></i></span>
+                            </button>
+                        </div>
+                        <div class="product-info">
+                            <h4>Classic Roman</h4>
+                            <div class="price">$400</div>
+                            <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i></div>
+                            <div class="company">Biltwell</div>
+                            <div class="quantity">
+                                <label>Qty: </label>
+                                <input type="number" value="1" min="1">
+                            </div>
+                            <button class="add-cart-btn"><span>Add to Cart</span></button>
+                        </div>
+                    </div>
+                    <!-- Product 5 -->
+                    <div class="product-card" data-id="5" data-price="200" data-stock="true" data-type="digital"
+                        data-color="silver">
+                        <div class="product-img" data-company="Biltwell">
+                            <img src="images/Watch5_0f753270-74d5-471c-b694-5f55d31a0f0e.png" alt="Classic Roman">
+                            <button class="product-detail">
+                                <span><i class="fa-solid fa-eye"></i></span></button>
+                        </div>
+                        <div class="product-info">
+                            <h4>Dial Numeral</h4>
+                            <div class="price">$200.00</div>
+                            <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i></div>
+                            <div class="company">Biltwell</div>
+                            <div class="quantity">
+                                <label>Qty: </label>
+                                <input type="number" value="1" min="1">
+                            </div>
+                            <button class="add-cart-btn"><span>Add to Cart</span></button>
+                        </div>
+                    </div>
+                    <!-- Product 6 -->
+                    <div class="product-card" data-id="6" data-price="750" data-stock="false" data-type="analog"
+                        data-color="black">
+                        <div class="product-img" data-company="Baggit">
+                            <img src="images/Watch7_cb15c914-d10f-4cd5-869a-beb6798eeb36.png" alt="Classic Roman">
+                            <button class="product-detail"><span><i class="fa-solid fa-eye"></i></span></button>
+                        </div>
+                        <div class="product-info">
+                            <h4>Analog Numeral</h4>
+                            <div class="price">$750.00</div>
+                            <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i></div>
+                            <div class="company">Baggit</div>
+                            <div class="quantity">
+                                <label>Qty: </label>
+                                <input type="number" value="1" min="1">
+                            </div>
+                            <button class="add-cart-btn"><span>Add to Cart</span></button>
+                        </div>
+                    </div>
+                    <!-- Product 7 -->
+                    <div class="product-card" data-id="7" data-price="230" data-stock="true" data-type="analog"
+                        data-color="silver" data-company="Biltwell">
+                        <div class="product-img">
+                            <img src="images/Watch9.png" alt="Dial Numeral">
+                            <button class="product-detail"><span><i class="fa-solid fa-eye"></i></span></button>
+                        </div>
+                        <div class="product-info">
+                            <h4>Dial Numeral</h4>
+                            <div class="price">$230.00</div>
+                            <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i></div>
+                            <div class="company">Biltwell</div>
+                            <div class="quantity">
+                                <label>Qty: </label>
+                                <input type="number" value="1" min="1">
+                            </div>
+                            <button class="add-cart-btn"><span>Add to Cart</span></button>
+                        </div>
+                    </div>
+                    <!-- Product 8 -->
+                    <div class="product-card" data-id="8" data-company="Baggit" data-price="350">
+                        <div class="product-img">
+                            <img src="images/Watch10.png" alt="Classical Numeral">
+                            <button class="product-detail"><span><i class="fa-solid fa-eye"></i></span></button>
+                        </div>
+                        <div class="product-info">
+                            <h4>Classical Numeral</h4>
+                            <div class="price">$350.00</div>
+                            <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i></div>
+                            <div class="company">Baggit</div>
+                            <div class="quantity">
+                                <label>Qty: </label>
+                                <input type="number" value="1" min="1">
+                            </div>
+                            <button class="add-cart-btn"><span>Add to Cart</span></button>
+                        </div>
+                    </div>
+                    <!-- Product 9 -->
+                    <div class="product-card" data-id="9" data-price="200" data-stock="true" data-type="digital"
+                        data-color="gold" data-company="Baggit">
+                        <div class="product-img">
+                            <img src="images/Watch11_ee5e1559-77e0-4263-8837-da6a2f86265f.png" alt="Roman Semi">
+                            <button class="product-detail"><span><i class="fa-solid fa-eye"></i></span></button>
+                        </div>
+                        <div class="product-info">
+                            <h4>Roman Semi</h4>
+                            <div class="price">$200.00</div>
+                            <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i></div>
+                            <div class="company">Baggit</div>
+                            <div class="quantity">
+                                <label>Qty: </label>
+                                <input type="number" value="1" min="1">
+                            </div>
+                            <button class="add-cart-btn"><span>Add to Cart</span></button>
+                        </div>
+                    </div>
+                    <!-- Product 10 -->
+                    <div class="product-card" data-id="10" data-price="200" data-stock="true" data-type="analog"
+                        data-color="silver" data-company="Baggit">
+                        <div class="product-img">
+                            <img src="images/Watch12.png" alt="Stainless Steel">
+                            <button class="product-detail"><span><i class="fa-solid fa-eye"></i></span></button>
+                        </div>
+                        <div class="product-info">
+                            <h4>Stainless Steel</h4>
+                            <div class="price">$200.00</div>
+                            <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i></div>
+                            <div class="company">Baggit</div>
+                            <div class="quantity">
+                                <label>Qty: </label>
+                                <input type="number" value="1" min="1">
+                            </div>
+                            <button class="add-cart-btn"><span>Add to Cart</span></button>
+                        </div>
+                    </div>
+                    <!-- Product 11 -->
+                    <div class="product-card" data-id="11" data-price="350" data-stock="false" data-type="analog"
+                        data-color="black" data-company="Baggit">
+                        <div class="product-img">
+                            <img src="images/Watch14.png" alt="Analog Automatic">
+                            <button class="product-detail"><span><i class="fa-solid fa-eye"></i></span></button>
+                        </div>
+                        <div class="product-info">
+                            <h4>Analog Automatic</h4>
+                            <div class="price">$350.00</div>
+                            <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i></div>
+                            <div class="company">Baggit</div>
+                            <div class="quantity">
+                                <label>Qty: </label>
+                                <input type="number" value="1" min="1">
+                            </div>
+                            <button class="add-cart-btn"><span>Add to Cart</span></button>
+                        </div>
+                    </div>
+                    <!-- Product 12 -->
+                    <div class="product-card" data-id="12" data-price="200" data-stock="false" data-type="analog"
+                        data-color="silver" data-company="Fostelo">
+                        <div class="product-img">
+                            <img src="images/Watch21.png" alt="Platinum Numeral">
+                            <button class="product-detail"><span><i class="fa-solid fa-eye"></i></span></button>
+                        </div>
+                        <div class="product-info">
+                            <h4>Platinum Numeral</h4>
+                            <div class="price">$200.00</div>
+                            <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i></div>
+                            <div class="company">Fostelo</div>
+                            <div class="quantity">
+                                <label>Qty: </label>
+                                <input type="number" value="1" min="1">
+                            </div>
+                            <button class="add-cart-btn"><span>Add to Cart</span></button>
+                        </div>
+                    </div>
+                    <!-- Product 13 -->
+                    <div class="product-card" data-id="13" data-price="450" data-stock="true" data-type="digital"
+                        data-color="silver" data-company="Baggit">
+                        <div class="product-img">
+                            <img src="images/Watch20.png" alt="Platinum Classic">
+                            <button class="product-detail"><span><i class="fa-solid fa-eye"></i></span></button>
+                        </div>
+                        <div class="product-info">
+                            <h4>Platinum Classic</h4>
+                            <div class="price">$450.00</div>
+                            <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i></div>
+                            <div class="company">Baggit</div>
+                            <div class="quantity">
+                                <label>Qty: </label>
+                                <input type="number" value="1" min="1">
+                            </div>
+                            <button class="add-cart-btn"><span>Add to Cart</span></button>
+                        </div>
+                    </div>
+                    <!-- Product 14 -->
+                    <div class="product-card" data-id="14" data-price="401" data-stock="true" data-type="digital"
+                        data-color="black" data-company="Baggit">
+                        <div class="product-img">
+                            <img src="images/Watch22.png" alt="Red & Black Numeral">
+                            <button class="product-detail"><span><i class="fa-solid fa-eye"></i></span></button>
+                        </div>
+                        <div class="product-info">
+                            <h4>Red & Black Numeral</h4>
+                            <div class="price">$401.00</div>
+                            <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i></div>
+                            <div class="company">Baggit</div>
+                            <div class="quantity">
+                                <label>Qty: </label>
+                                <input type="number" value="1" min="1">
+                            </div>
+                            <button class="add-cart-btn"><span>Add to Cart</span></button>
+                        </div>
+                    </div>
+                    <!-- Product 15 -->
+                    <div class="product-card" data-id="15" data-price="200" data-stock="true" data-type="digital"
+                        data-color="gold" data-company="Fostelo">
+                        <div class="product-img">
+                            <img src="images/Watch18.png" alt="Golden Automatic">
+                            <button class="product-detail"><span><i class="fa-solid fa-eye"></i></span></button>
+                        </div>
+                        <div class="product-info">
+                            <h4>Golden Automatic</h4>
+                            <div class="price">$200.00</div>
+                            <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i></div>
+                            <div class="company">Fostelo</div>
+                            <div class="quantity">
+                                <label>Qty: </label>
+                                <input type="number" value="1" min="1">
+                            </div>
+                            <button class="add-cart-btn"><span>Add to Cart</span></button>
+                        </div>
+                    </div>
+                    <!-- Product 16 -->
+                    <div class="product-card" data-id="16" data-price="300" data-stock="true" data-type="analog"
+                        data-color="gold" data-company="Ex of Sale Tax">
+                        <div class="product-img">
+                            <img src="images/Watch15.png" alt="Golden Classical">
+                            <button class="product-detail"><span><i class="fa-solid fa-eye"></i></span></button>
+                        </div>
+                        <div class="product-info">
+                            <h4>Golden Classical</h4>
+                            <div class="price">$301.00</div>
+                            <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i></div>
+                            <div class="company">Ex of Sale Tax</div>
+                            <div class="quantity">
+                                <label>Qty: </label>
+                                <input type="number" value="1" min="1">
+                            </div>
+                            <button class="add-cart-btn"><span>Add to Cart</span></button>
+                        </div>
+                    </div>
+                    <!-- Product 17 -->
+                    <div class="product-card" data-id="17" data-price="300" data-stock="false" data-type="analog"
+                        data-color="black" data-company="Ex of Sale Tax">
+                        <div class="product-img">
+                            <img src="images/Watch6.png" alt="Analog Roman">
+                            <button class="product-detail"><span><i class="fa-solid fa-eye"></i></span></button>
+                        </div>
+                        <div class="product-info">
+                            <h4>Analog Roman</h4>
+                            <div class="price">$300.00</div>
+                            <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i></div>
+                            <div class="company">Ex of Sale Tax</div>
+                            <div class="quantity">
+                                <label>Qty: </label>
+                                <input type="number" value="1" min="1">
+                            </div>
+                            <button class="add-cart-btn"><span>Add to Cart</span></button>
+                        </div>
+                    </div>
+                    <!-- Product 18 -->
+                    <div class="product-card" data-id="18" data-price="200" data-stock="true" data-type="analog"
+                        data-color="gold" data-company="Ex of Sale Tax">
+                        <div class="product-img">
+                            <img src="images/Watch16.png" alt="Golden Analog Watch">
+                            <button class="product-detail"><span><i class="fa-solid fa-eye"></i></span></button>
+                        </div>
+                        <div class="product-info">
+                            <h4>Golden Analog Watch</h4>
+                            <div class="price">$200.00</div>
+                            <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i></div>
+                            <div class="company">Ex of Sale Tax</div>
+                            <div class="quantity">
+                                <label>Qty: </label>
+                                <input type="number" value="1" min="1">
+                            </div>
+                            <button class="add-cart-btn"><span>Add to Cart</span></button>
+                        </div>
+                    </div>
+                </section>
+
+            </main>
+            <div id="pagination" class="pagination"></div>
+        </div>
+        <!-- <div id="login-popup" class="cart-message error">❌ Please log in to add products to your cart.</div> -->
+
+        <!-- Start help services -->
+        <div class="help-services">
+            <div class="help-container">
+                <div class="help-column">
+                    <h4>Help</h4>
+                    <ul>
+                        <li><a href="#">Search</a></li>
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">Information</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Shipping Details</a></li>
+                    </ul>
+                </div>
+                <div class="help-column">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Refunds & Returns</a></li>
+                        <li><a href="#">Deliveries</a></li>
+                    </ul>
+                </div>
+                <div class="help-column">
+                    <h4>Information</h4>
+                    <ul>
+                        <li><a href="#">Search Terms</a></li>
+                        <li><a href="#">Advanced Search</a></li>
+                        <li><a href="#">Help & Faq's</a></li>
+                        <li><a href="#">Store Location</a></li>
+                        <li><a href="#">Orders & Returns</a></li>
+                    </ul>
+                </div>
+                <div class="help-column">
+                    <h4>Address</h4>
+                    <p><i class="fa-solid fa-house"></i> No: 58 A, East Madison Street</p>
+                    <p> Baltimore, MD, USA 4508</p>
+                    <ul>
+                        <li><a href="#"><i class="fa-solid fa-phone"></i> Phone: 0000 - 123 - 456789</a></li>
+                        <li><a href="#">
+                                <fi class="fa-solid fa-envelope"></fi>Email: info@example.com
+                            </a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+        <!-- End help services -->
+        <!-- Footer -->
+        <footer>
+            <p>All Right Reserved © 2025, Design Themes</p>
+        </footer>
+
+        <!-- Back to Top Button -->
+        <button id="backToTop" title="Go to top">
+            <span><i class="fa-regular fa-clock"></i></span>
+        </button>
+    </div>
+    <script type="module" src="main.js"></script>
+    <script type="module" src="/js/product.js"></script>
+</body>
+
+</html>
