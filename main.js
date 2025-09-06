@@ -10,6 +10,7 @@ import {
 } from "./js/ui.js";
 import { Slider } from "./js/slider.js";
 import UserMenu from "./js/userMenu.js";
+import ShopPage from "./js/product.js";
 // import Cart from "./js/cart.js";
 import { CartSidebar } from "./js/cart-sidebar.js";
 document.addEventListener("DOMContentLoaded", () => {
@@ -24,5 +25,6 @@ document.addEventListener("DOMContentLoaded", () => {
   QuoteSlider.init();
   CartSidebar.init();
   // Cart.init();
+  ShopPage.init();
   ScrollTop.init();
 });
