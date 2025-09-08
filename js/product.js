@@ -236,3 +236,4 @@ const ShopPage = {
 };
 
 document.addEventListener("DOMContentLoaded", () => ShopPage.init());
+export default ShopPage;
