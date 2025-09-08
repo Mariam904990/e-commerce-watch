@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
   UserMenu.init();
   Slider.init(".slider", 4000);
   CategoryFilter.init();
-  CountdownModule.init(100);
+  // CountdownModule.init(100);
   QuoteSlider.init();
   CartSidebar.init();
   // Cart.init();
